@@ -53,7 +53,7 @@ type SecondParameter<T extends (...args: never) => unknown> = Parameters<T>[1];
  * @summary Health check
  */
 export const getHealthCheckUrl = () => {
-  return `/api/healthz`;
+  return `/_/backend/healthz`;
 };
 
 export const healthCheck = async (
@@ -66,7 +66,7 @@ export const healthCheck = async (
 };
 
 export const getHealthCheckQueryKey = () => {
-  return [`/api/healthz`] as const;
+  return [`/_/backend/healthz`] as const;
 };
 
 export const getHealthCheckQueryOptions = <
@@ -128,7 +128,7 @@ export function useHealthCheck<
  * @summary Register a new user
  */
 export const getRegisterUserUrl = () => {
-  return `/api/auth/register`;
+  return `/_/backend/auth/register`;
 };
 
 export const registerUser = async (
@@ -214,7 +214,7 @@ export const useRegisterUser = <
  * @summary Login user
  */
 export const getLoginUserUrl = () => {
-  return `/api/auth/login`;
+  return `/_/backend/auth/login`;
 };
 
 export const loginUser = async (
@@ -300,7 +300,7 @@ export const useLoginUser = <
  * @summary Logout user
  */
 export const getLogoutUserUrl = () => {
-  return `/api/auth/logout`;
+  return `/_/backend/auth/logout`;
 };
 
 export const logoutUser = async (options?: RequestInit): Promise<void> => {
@@ -379,7 +379,7 @@ export const useLogoutUser = <
  * @summary Get current logged in user
  */
 export const getGetCurrentUserUrl = () => {
-  return `/api/auth/me`;
+  return `/_/backend/auth/me`;
 };
 
 export const getCurrentUser = async (options?: RequestInit): Promise<User> => {
@@ -390,7 +390,7 @@ export const getCurrentUser = async (options?: RequestInit): Promise<User> => {
 };
 
 export const getGetCurrentUserQueryKey = () => {
-  return [`/api/auth/me`] as const;
+  return [`/_/backend/auth/me`] as const;
 };
 
 export const getGetCurrentUserQueryOptions = <
@@ -463,8 +463,8 @@ export const getListCropsUrl = (params?: ListCropsParams) => {
   const stringifiedParams = normalizedParams.toString();
 
   return stringifiedParams.length > 0
-    ? `/api/crops?${stringifiedParams}`
-    : `/api/crops`;
+    ? `/_/backend/crops?${stringifiedParams}`
+    : `/_/backend/crops`;
 };
 
 export const listCrops = async (
@@ -478,7 +478,7 @@ export const listCrops = async (
 };
 
 export const getListCropsQueryKey = (params?: ListCropsParams) => {
-  return [`/api/crops`, ...(params ? [params] : [])] as const;
+  return [`/_/backend/crops`, ...(params ? [params] : [])] as const;
 };
 
 export const getListCropsQueryOptions = <
@@ -546,7 +546,7 @@ export function useListCrops<
  * @summary Create a new crop listing
  */
 export const getCreateCropUrl = () => {
-  return `/api/crops`;
+  return `/_/backend/crops`;
 };
 
 export const createCrop = async (
@@ -632,7 +632,7 @@ export const useCreateCrop = <
  * @summary Get a single crop listing
  */
 export const getGetCropUrl = (id: string) => {
-  return `/api/crops/${id}`;
+  return `/_/backend/crops/${id}`;
 };
 
 export const getCrop = async (
@@ -646,7 +646,7 @@ export const getCrop = async (
 };
 
 export const getGetCropQueryKey = (id: string) => {
-  return [`/api/crops/${id}`] as const;
+  return [`/_/backend/crops/${id}`] as const;
 };
 
 export const getGetCropQueryOptions = <
@@ -709,7 +709,7 @@ export function useGetCrop<
  * @summary Update a crop listing
  */
 export const getUpdateCropUrl = (id: string) => {
-  return `/api/crops/${id}`;
+  return `/_/backend/crops/${id}`;
 };
 
 export const updateCrop = async (
@@ -796,7 +796,7 @@ export const useUpdateCrop = <
  * @summary Delete a crop listing
  */
 export const getDeleteCropUrl = (id: string) => {
-  return `/api/crops/${id}`;
+  return `/_/backend/crops/${id}`;
 };
 
 export const deleteCrop = async (
@@ -891,8 +891,8 @@ export const getListContractsUrl = (params?: ListContractsParams) => {
   const stringifiedParams = normalizedParams.toString();
 
   return stringifiedParams.length > 0
-    ? `/api/contracts?${stringifiedParams}`
-    : `/api/contracts`;
+    ? `/_/backend/contracts?${stringifiedParams}`
+    : `/_/backend/contracts`;
 };
 
 export const listContracts = async (
@@ -906,7 +906,7 @@ export const listContracts = async (
 };
 
 export const getListContractsQueryKey = (params?: ListContractsParams) => {
-  return [`/api/contracts`, ...(params ? [params] : [])] as const;
+  return [`/_/backend/contracts`, ...(params ? [params] : [])] as const;
 };
 
 export const getListContractsQueryOptions = <
@@ -974,7 +974,7 @@ export function useListContracts<
  * @summary Create a new contract proposal
  */
 export const getCreateContractUrl = () => {
-  return `/api/contracts`;
+  return `/_/backend/contracts`;
 };
 
 export const createContract = async (
@@ -1060,7 +1060,7 @@ export const useCreateContract = <
  * @summary Get a single contract
  */
 export const getGetContractUrl = (id: string) => {
-  return `/api/contracts/${id}`;
+  return `/_/backend/contracts/${id}`;
 };
 
 export const getContract = async (
@@ -1074,7 +1074,7 @@ export const getContract = async (
 };
 
 export const getGetContractQueryKey = (id: string) => {
-  return [`/api/contracts/${id}`] as const;
+  return [`/_/backend/contracts/${id}`] as const;
 };
 
 export const getGetContractQueryOptions = <
@@ -1147,7 +1147,7 @@ export function useGetContract<
  * @summary Update contract status or terms
  */
 export const getUpdateContractUrl = (id: string) => {
-  return `/api/contracts/${id}`;
+  return `/_/backend/contracts/${id}`;
 };
 
 export const updateContract = async (
@@ -1245,8 +1245,8 @@ export const getListMessagesUrl = (params?: ListMessagesParams) => {
   const stringifiedParams = normalizedParams.toString();
 
   return stringifiedParams.length > 0
-    ? `/api/messages?${stringifiedParams}`
-    : `/api/messages`;
+    ? `/_/backend/messages?${stringifiedParams}`
+    : `/_/backend/messages`;
 };
 
 export const listMessages = async (
@@ -1260,7 +1260,7 @@ export const listMessages = async (
 };
 
 export const getListMessagesQueryKey = (params?: ListMessagesParams) => {
-  return [`/api/messages`, ...(params ? [params] : [])] as const;
+  return [`/_/backend/messages`, ...(params ? [params] : [])] as const;
 };
 
 export const getListMessagesQueryOptions = <
@@ -1328,7 +1328,7 @@ export function useListMessages<
  * @summary Send a message
  */
 export const getSendMessageUrl = () => {
-  return `/api/messages`;
+  return `/_/backend/messages`;
 };
 
 export const sendMessage = async (
@@ -1414,7 +1414,7 @@ export const useSendMessage = <
  * @summary List all conversations for current user
  */
 export const getListConversationsUrl = () => {
-  return `/api/messages/conversations`;
+  return `/_/backend/messages/conversations`;
 };
 
 export const listConversations = async (
@@ -1427,7 +1427,7 @@ export const listConversations = async (
 };
 
 export const getListConversationsQueryKey = () => {
-  return [`/api/messages/conversations`] as const;
+  return [`/_/backend/messages/conversations`] as const;
 };
 
 export const getListConversationsQueryOptions = <
@@ -1489,7 +1489,7 @@ export function useListConversations<
  * @summary Get dashboard summary stats
  */
 export const getGetDashboardSummaryUrl = () => {
-  return `/api/dashboard/summary`;
+  return `/_/backend/dashboard/summary`;
 };
 
 export const getDashboardSummary = async (
@@ -1502,7 +1502,7 @@ export const getDashboardSummary = async (
 };
 
 export const getGetDashboardSummaryQueryKey = () => {
-  return [`/api/dashboard/summary`] as const;
+  return [`/_/backend/dashboard/summary`] as const;
 };
 
 export const getGetDashboardSummaryQueryOptions = <
@@ -1564,7 +1564,7 @@ export function useGetDashboardSummary<
  * @summary Get recent activity feed
  */
 export const getGetRecentActivityUrl = () => {
-  return `/api/dashboard/recent-activity`;
+  return `/_/backend/dashboard/recent-activity`;
 };
 
 export const getRecentActivity = async (
@@ -1577,7 +1577,7 @@ export const getRecentActivity = async (
 };
 
 export const getGetRecentActivityQueryKey = () => {
-  return [`/api/dashboard/recent-activity`] as const;
+  return [`/_/backend/dashboard/recent-activity`] as const;
 };
 
 export const getGetRecentActivityQueryOptions = <
@@ -1639,7 +1639,7 @@ export function useGetRecentActivity<
  * @summary Get ImageKit auth parameters for client-side upload
  */
 export const getGetImageKitAuthUrl = () => {
-  return `/api/upload/auth`;
+  return `/_/backend/upload/auth`;
 };
 
 export const getImageKitAuth = async (
@@ -1652,7 +1652,7 @@ export const getImageKitAuth = async (
 };
 
 export const getGetImageKitAuthQueryKey = () => {
-  return [`/api/upload/auth`] as const;
+  return [`/_/backend/upload/auth`] as const;
 };
 
 export const getGetImageKitAuthQueryOptions = <

@@ -21,7 +21,7 @@ export default defineConfig({
     host: "0.0.0.0",
     strictPort: false,
     proxy: {
-      "/api": {
+      "/_/backend": {
         target: "http://localhost:5001",
         changeOrigin: true,
       },

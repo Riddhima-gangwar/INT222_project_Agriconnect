@@ -15,7 +15,7 @@
   ],
   "rewrites": [
     {
-      "source": "/api/(.*)",
+      "source": "/_/backend/(.*)",
       "destination": "/api/index.js"
     },
     {

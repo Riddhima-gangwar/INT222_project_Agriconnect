@@ -40,7 +40,7 @@ export function ImageUpload({
     setUploading(true);
     try {
       const token = localStorage.getItem("token");
-      const authRes = await fetch("/api/upload/auth", {
+      const authRes = await fetch("/_/backend/upload/auth", {
         headers: { Authorization: `Bearer ${token}` },
       });
       if (!authRes.ok) throw new Error("Failed to get upload credentials");
@@ -55,7 +55,7 @@ export function ImageUpload({
       formData.append("expire", String(expire));
       formData.append("token", ikToken);
 
-      const uploadRes = await fetch("https://upload.imagekit.io/api/v1/files/upload", {
+      const uploadRes = await fetch("https://upload.imagekit.io/_/backend/v1/files/upload", {
         method: "POST",
         body: formData,
       });

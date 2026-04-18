@@ -37,6 +37,6 @@ connectMongoDB().catch((err) => {
   process.exit(1);
 });
 
-app.use("/api", router);
+app.use("/_/backend", router);
 
 export default app;
