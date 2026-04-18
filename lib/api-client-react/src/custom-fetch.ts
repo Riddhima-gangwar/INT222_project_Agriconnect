@@ -2,7 +2,7 @@ export type AuthTokenGetter = () => string | null | Promise<string | null>;
 export type ErrorType<T> = T;
 export type BodyType<T> = T;
 
-let baseUrl = "http://localhost:5001";
+let baseUrl = "";
 let authTokenGetter: AuthTokenGetter | null = null;
 
 export function setBaseUrl(url: string) {
