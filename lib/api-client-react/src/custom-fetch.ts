@@ -1,6 +1,6 @@
 export type AuthTokenGetter = () => string | null | Promise<string | null>;
 export type ErrorType<T> = T;
-export type BodyType = any;
+export type BodyType<T> = T;
 
 let baseUrl = "http://localhost:5001";
 let authTokenGetter: AuthTokenGetter | null = null;
