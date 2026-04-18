@@ -2,6 +2,11 @@
   "name": "agriconnect",
   "version": "1.0.0",
   "description": "AgriConnect - Assured Contract Farming System (MERN Stack)",
+  "workspaces": [
+    "backend",
+    "frontend",
+    "lib/*"
+  ],
   "scripts": {
     "install:all": "npm install && cd backend && npm install && cd ../frontend && npm install",
     "backend": "cd backend && npm run dev",
@@ -9,19 +14,6 @@
     "dev": "concurrently \"npm run backend\" \"npm run frontend\"",
     "build": "cd frontend && npm run build",
     "start": "cd backend && npm start"
-  },
-  "dependencies": {
-    "bcryptjs": "^3.0.3",
-    "cookie-parser": "^1.4.7",
-    "cors": "^2.8.5",
-    "dotenv": "^16.6.1",
-    "express": "^5.0.0",
-    "imagekit": "^6.0.0",
-    "jsonwebtoken": "^9.0.3",
-    "mongoose": "^9.4.1",
-    "pino": "^9.0.0",
-    "pino-http": "^10.0.0",
-    "pino-pretty": "^13.0.0"
   },
   "devDependencies": {
     "concurrently": "^9.0.0"
