@@ -2,11 +2,6 @@
   "name": "agriconnect",
   "version": "1.0.0",
   "description": "AgriConnect - Assured Contract Farming System (MERN Stack)",
-  "workspaces": [
-    "backend",
-    "frontend",
-    "lib/*"
-  ],
   "scripts": {
     "install:all": "npm install && cd backend && npm install && cd ../frontend && npm install",
     "backend": "cd backend && npm run dev",
