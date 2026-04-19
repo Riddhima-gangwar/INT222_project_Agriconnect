@@ -25,6 +25,7 @@ import {
   Download,
   Calendar,
   MapPin,
+  Scale,
   DollarSign,
   ShieldCheck,
 } from "lucide-react";

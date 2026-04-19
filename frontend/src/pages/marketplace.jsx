@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Layout } from "@/components/layout";
 import { Link } from "wouter";
 import {
@@ -24,7 +24,7 @@ export default function Marketplace() {
   const [category, setCategory] = useState("all");
   const [debouncedSearch, setDebouncedSearch] = useState("");
 
-  useState(() => {
+  useEffect(() => {
     const timer = setTimeout(() => setDebouncedSearch(search), 500);
     return () => clearTimeout(timer);
   }, [search]);

@@ -45,7 +45,7 @@ import { format } from "date-fns";
 import { z } from "zod";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 const proposalSchema = z.object({
   quantity: z.coerce.number().min(1, "Quantity must be at least 1"),
@@ -83,7 +83,7 @@ export default function CropDetail() {
   });
 
   // Pre-fill form when crop loads
-  useState(() => {
+  useEffect(() => {
     if (crop) {
       form.reset({
         quantity: crop.quantity,
@@ -93,7 +93,7 @@ export default function CropDetail() {
         terms: "",
       });
     }
-  });
+  }, [crop, form, user?.location]);
 
   function onSubmit(data) {
     if (!crop) return;
