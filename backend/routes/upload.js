@@ -6,9 +6,9 @@ const router = Router();
 
 router.get("/upload/auth", requireAuth, async (_req, res) => {
   try {
-    const publicKey = process.env.IMAGEKIT_PUBLIC_KEY;
-    const privateKey = process.env.IMAGEKIT_PRIVATE_KEY;
-    const urlEndpoint = process.env.IMAGEKIT_URL_ENDPOINT;
+    const publicKey = process.env.IMAGEKIT_PUBLIC_KEY?.trim();
+    const privateKey = process.env.IMAGEKIT_PRIVATE_KEY?.trim();
+    const urlEndpoint = process.env.IMAGEKIT_URL_ENDPOINT?.trim();
 
     if (!publicKey || !privateKey || !urlEndpoint) {
       console.error("ImageKit env vars missing:", { publicKey: !!publicKey, privateKey: !!privateKey, urlEndpoint: !!urlEndpoint });

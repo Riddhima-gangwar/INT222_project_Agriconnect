@@ -10,3 +10,4 @@ client/dist/
 Thumbs.db
 *.tsbuildinfo
 .vite/
+.vercel
