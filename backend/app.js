@@ -37,6 +37,9 @@ connectMongoDB().catch((err) => {
   process.exit(1);
 });
 
+// Mount on /api for local development (frontend proxies /api/* → localhost:5001)
+// Mount on / for Vercel serverless where the /api prefix may be stripped by the router
 app.use("/api", router);
+app.use("/", router);
 
 export default app;
