@@ -26,6 +26,7 @@ import {
   Calendar,
   MapPin,
   DollarSign,
+  ShieldCheck,
 } from "lucide-react";
 import { format } from "date-fns";
 import { useState, useRef, useEffect } from "react";
