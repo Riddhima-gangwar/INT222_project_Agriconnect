@@ -132,8 +132,8 @@ export default function Dashboard() {
               title="Total Value"
               value={
                 summary?.totalRevenue
-                  ? `$${summary.totalRevenue.toLocaleString()}`
-                  : "$0"
+                  ? `₹${summary.totalRevenue.toLocaleString()}`
+                  : "₹0"
               }
               icon={<DollarSign className="h-6 w-6 text-emerald-600" />}
               isLoading={isLoadingSummary}

@@ -193,7 +193,7 @@ function CropCard({ crop }) {
               </div>
               <div className="flex items-baseline gap-1">
                 <span className="text-2xl font-bold text-primary font-serif">
-                  ${crop.pricePerUnit.toFixed(2)}
+                  ₹{crop.pricePerUnit.toFixed(2)}
                 </span>
                 <span className="text-sm text-muted-foreground">
                   /{crop.unit}

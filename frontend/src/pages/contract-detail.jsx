@@ -337,7 +337,7 @@ export default function ContractDetail() {
                         Unit Price
                       </p>
                       <p className="font-bold text-2xl text-foreground">
-                        ${contract.agreedPrice.toFixed(2)}{" "}
+                        ₹{contract.agreedPrice.toFixed(2)}{" "}
                         <span className="text-lg font-medium text-muted-foreground">
                           / {contract.unit}
                         </span>
@@ -392,8 +392,8 @@ export default function ContractDetail() {
                       </span>
                     </p>
                   </div>
-                  <div className="text-3xl font-bold font-serif text-primary">
-                    $
+                  <div className="text-2xl font-bold text-foreground font-serif">
+                    ₹
                     {totalValue.toLocaleString(undefined, {
                       minimumFractionDigits: 2,
                       maximumFractionDigits: 2,

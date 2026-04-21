@@ -55,7 +55,7 @@ export default function CreateCrop() {
       quantity: 0,
       unit: "tons",
       pricePerUnit: 0,
-      currency: "USD",
+      currency: "INR",
       harvestDate: "",
       imageUrl: "",
     },
@@ -307,12 +307,12 @@ export default function CreateCrop() {
                     render={({ field }) => (
                       <FormItem>
                         <FormLabel className="text-base">
-                          Asking Price (USD)
+                          Asking Price (INR)
                         </FormLabel>
                         <FormControl>
                           <div className="relative">
                             <span className="absolute left-4 top-1/2 -translate-y-1/2 text-muted-foreground font-medium">
-                              $
+                              ₹
                             </span>
                             <Input
                               type="number"

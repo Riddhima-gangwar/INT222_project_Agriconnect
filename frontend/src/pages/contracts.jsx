@@ -246,7 +246,7 @@ function ContractCard({ contract, userRole, statusBadge, paymentBadge }) {
         <div className="md:text-right bg-muted/20 md:bg-transparent p-4 md:p-0 rounded-xl md:rounded-none">
           <div className="flex items-center md:justify-end gap-2 mb-1">
             <div className="text-2xl font-bold text-foreground font-serif">
-              $
+              ₹
               {totalValue.toLocaleString(undefined, {
                 minimumFractionDigits: 2,
                 maximumFractionDigits: 2,
@@ -256,7 +256,7 @@ function ContractCard({ contract, userRole, statusBadge, paymentBadge }) {
           </div>
           <div className="text-sm font-medium text-muted-foreground">
             {contract.quantity.toLocaleString()} {contract.unit}{" "}
-            <span className="opacity-50 mx-1">×</span> ${contract.agreedPrice}/
+            <span className="opacity-50 mx-1">×</span> ₹{contract.agreedPrice}/
             {contract.unit}
           </div>
         </div>

@@ -228,7 +228,7 @@ export default function CropDetail() {
                 </h1>
                 <div className="flex items-baseline gap-2">
                   <span className="text-4xl font-bold text-primary font-serif">
-                    ${crop.pricePerUnit.toFixed(2)}
+                    ₹{crop.pricePerUnit.toFixed(2)}
                   </span>
                   <span className="text-xl font-medium text-muted-foreground">
                     / {crop.unit}
@@ -332,7 +332,7 @@ export default function CropDetail() {
                               render={({ field }) => (
                                 <FormItem>
                                   <FormLabel className="text-base">
-                                    Price / {crop.unit} ($)
+                                    Price / {crop.unit} (₹)
                                   </FormLabel>
                                   <FormControl>
                                     <Input
@@ -344,7 +344,7 @@ export default function CropDetail() {
                                     />
                                   </FormControl>
                                   <p className="text-xs text-muted-foreground font-medium">
-                                    Asking: ${crop.pricePerUnit}
+                                    Asking: ₹{crop.pricePerUnit}
                                   </p>
                                   <FormMessage />
                                 </FormItem>
@@ -357,7 +357,7 @@ export default function CropDetail() {
                               Est. Contract Value
                             </div>
                             <div className="text-2xl font-bold text-primary font-serif">
-                              $
+                              ₹
                               {(
                                 form.watch("quantity") *
                                 form.watch("agreedPrice")
@@ -609,6 +609,7 @@ export default function CropDetail() {
                   <Button
                     variant="outline"
                     className="w-full rounded-full border-border text-muted-foreground hover:text-foreground"
+                    onClick={() => toast({ title: "Coming soon", description: "Public profiles are under development." })}
                   >
                     View Full Profile
                   </Button>

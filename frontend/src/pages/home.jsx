@@ -121,7 +121,7 @@ export default function Home() {
             </div>
             <div className="px-4">
               <div className="text-3xl md:text-4xl font-bold font-serif mb-1">
-                $40M
+                ₹40M
               </div>
               <div className="text-sm font-medium opacity-80 uppercase tracking-wider">
                 Value Traded
@@ -271,7 +271,7 @@ export default function Home() {
                           <Users className="h-4 w-4" /> {crop.farmerName}
                         </div>
                         <div className="font-bold text-secondary text-xl">
-                          ${crop.pricePerUnit.toFixed(2)}
+                          ₹{crop.pricePerUnit.toFixed(2)}
                           <span className="text-sm font-normal text-white/70">
                             /{crop.unit}
                           </span>
