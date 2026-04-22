@@ -181,3 +181,4 @@ npm run dev:client    # React → http://localhost:5173
 
 - **Farmer** — creates crop listings with photos, receives contract proposals, accepts/rejects, messages buyers
 - **Buyer** — browses marketplace, proposes contracts, negotiates terms via in-platform messaging
+dc
