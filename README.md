@@ -1,6 +1,6 @@
 # AgriConnect — Assured Contract Farming System
 
-A full-stack MERN platform connecting farmers and buyers through guaranteed contract farming, a crop marketplace, real-time messaging, and contract management.
+A full-stack MERN platforms connecting farmers and buyers through guaranteed contract farming, a crop marketplace, real-time messaging, and contract management.
 
 ## Tech Stack
 
